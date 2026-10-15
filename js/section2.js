@@ -33,5 +33,21 @@ d3.select('#demo-2')
 const electricityPrices = sampledData.map(item => parseFloat(item.elec));
 // YOUR CODE GOES HERE 
 
+const barScale = 250;
+
+d3.select('#demo-2')
+    .append('svg')
+    .attr('width', 400)
+    .attr('height', 100)
+    .selectAll('rect')
+    .data(electricityPrices)
+    .join('rect')
+    .attr('x', (d, i) => i*60+10)
+    .attr('y', d => 100 - d * barScale)
+    .attr('width', 40)
+    .attr('height', d => d * barScale)
+    .attr('fill', 'green');
+
+
 // Remember that circle needs radius (r) and center (cx, cy) to create it,
 // while rectangles need x, y, width, and height. You can use the electricity price to determine the height of the rectangle and set a fixed width.

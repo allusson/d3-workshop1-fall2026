@@ -15,18 +15,27 @@
 // d3.selectAll() finds ALL elements (like querySelectorAll)
 
 d3.select('#demo-1')
-    .style('color', 'blue')
+    .style('color', 'purple')
     .style('font-size', '20px')
     .text('This text was changed by D3!');
 
 // TODO: change the text above to add your name
 // TODO: change the color to something else you like // keep in mind color contrast
-
+d3.select('#demo-1')
+    .style('color', 'purple')
+    .style('font-size', '20px')
+    .text('This text was changed by Raphael Allusson');
 
 // Create and append new elements
 d3.select('#demo-1')
     .append('p')
     .text('This paragraph was created by D3')
-    .style('background-color', 'lightgray');
+    .style('background-color', '#C9A9A6');
+
+d3.select('#demo-1')
+    .append('p')
+    .text('Lasagna favorite food bang')
+    .style('background-color', 'pink')
+    .style('color', 'purple');
 
 // TODO: append a new element with your favorite food and style it with a different background color
